@@ -1,0 +1,36 @@
+{
+    "data": {
+        "entries": [
+            {
+                "connection_class": "local_poll",
+                "data": {
+                    "port_mapping": true,
+                    "sensors": false,
+                    "ssdp_description": "http://192.168.178.1:49000/igddesc.xml",
+                    "udn": "uuid:75802409-bccb-40e7-8e6c-E8DF707C512C"
+                },
+                "domain": "upnp",
+                "entry_id": "4901f3332e9340eea05708530af9f8dd",
+                "source": "discovery",
+                "title": "FRITZ!Box 3490",
+                "version": 1
+            },
+            {
+                "connection_class": "local_poll",
+                "data": {
+                    "port_mapping": true,
+                    "sensors": false,
+                    "ssdp_description": "http://192.168.178.1:49000/igd2desc.xml",
+                    "udn": "uuid:75802409-bccb-40e7-9f6c-E8DF707C512C"
+                },
+                "domain": "upnp",
+                "entry_id": "a85afe4269bf4ca9b1b2a166d94d1c0e",
+                "source": "user",
+                "title": "InternetGatewayDeviceV2 - FRITZ!Box 3490",
+                "version": 1
+            }
+        ]
+    },
+    "key": "core.config_entries",
+    "version": 1
+}

@@ -1,0 +1,130 @@
+{
+    "data": {
+        "credentials": [
+            {
+                "auth_provider_id": null,
+                "auth_provider_type": "homeassistant",
+                "data": {
+                    "username": "kian"
+                },
+                "id": "3ae3ecc8098b49c8b50cd1b94bd71f16",
+                "user_id": "486b1d4ad436476d81c8151b69186ee2"
+            },
+            {
+                "auth_provider_id": null,
+                "auth_provider_type": "trusted_networks",
+                "data": {
+                    "user_id": "486b1d4ad436476d81c8151b69186ee2"
+                },
+                "id": "994ae940f63d4388956c8941af412270",
+                "user_id": "486b1d4ad436476d81c8151b69186ee2"
+            }
+        ],
+        "groups": [
+            {
+                "id": "745d425900fe4a599d55a5692d49169d",
+                "name": "All Access"
+            }
+        ],
+        "refresh_tokens": [
+            {
+                "access_token_expiration": 1800.0,
+                "client_icon": null,
+                "client_id": "http://192.168.178.4:8123/",
+                "client_name": null,
+                "created_at": "2018-11-01T07:23:35.860137+00:00",
+                "id": "7ef23900f398450393ac0c745413be7c",
+                "jwt_key": "6ea99c5d541691a331c9bc4a69f08f0d623f383f8500f570b086e1c8358c926443e4fbc8de008f3d1bd879d4e1919cc812bce69eab8eb083cb4727917bff39af",
+                "last_used_at": "2018-11-01T15:09:47.152404+00:00",
+                "last_used_ip": "192.168.178.201",
+                "token": "4a647ecf1846912ee1f179e308712c7402ccfb3e01a123c42a847670b34cd38c62633390fefdc0f2d1af3ab270d30edcc7b3511c8e2496e557cc0d046e21dbb1",
+                "token_type": "normal",
+                "user_id": "486b1d4ad436476d81c8151b69186ee2"
+            },
+            {
+                "access_token_expiration": 1800.0,
+                "client_icon": null,
+                "client_id": "http://hassbian.local:8123/",
+                "client_name": null,
+                "created_at": "2018-10-31T13:40:14.597562+00:00",
+                "id": "6ccf46b269d9427f9c891180fc0fc2aa",
+                "jwt_key": "973ffc5dcf43f13a1576ace1fa73ae093716348d68f0c06155618922f5944c9d82cb6a43eabc92300a23bfecd2f8b6ccf3497362a8be57cc62ac548084f58084",
+                "last_used_at": "2018-10-31T18:15:56.707577+00:00",
+                "last_used_ip": "192.168.178.28",
+                "token": "27f382b816e04c5e921164c652c8ce0daacd95b0c67b5f18d5340c7f9468f880499d7c17c06986954acef38f81f0e6d4f83fd5018d19e55b3a9eee02e0211492",
+                "token_type": "normal",
+                "user_id": "486b1d4ad436476d81c8151b69186ee2"
+            },
+            {
+                "access_token_expiration": 1800.0,
+                "client_icon": null,
+                "client_id": "http://192.168.178.4:8123/",
+                "client_name": null,
+                "created_at": "2018-11-01T15:30:52.253049+00:00",
+                "id": "b76523b97ff74467b93237d493c703e9",
+                "jwt_key": "a4f3abe254af9e9691961065c091a83772ff6402185fa9229a3d044407e0a61ad048da77ec1be87972cfb0c7a10866d3d39b1130cfa8ed2ed87d6a2fbb1ac89f",
+                "last_used_at": "2018-11-01T15:30:52.253296+00:00",
+                "last_used_ip": "192.168.178.201",
+                "token": "2c781c294dc10bccd8bea08e2f18fa9c608def34e717fda82407bdd64c3a45b6eb36e9ed747dce90bf2ce3081dbd7ff08f711ec9113cc2220c061648530633d9",
+                "token_type": "normal",
+                "user_id": "486b1d4ad436476d81c8151b69186ee2"
+            },
+            {
+                "access_token_expiration": 1800.0,
+                "client_icon": null,
+                "client_id": "http://192.168.178.4:8123/",
+                "client_name": null,
+                "created_at": "2018-11-01T15:37:23.366746+00:00",
+                "id": "fdf68f3941ad469eaa07f5a40a35379a",
+                "jwt_key": "f7123b3342eb52f9aae07bffb8e8fcf3e6fbe356dad5649edf67163ef1c82c2543531e78b5473bf84b3fcfaa4d134e200c6cf6d2e8bf5095cf927af1a7ac3176",
+                "last_used_at": "2018-11-02T12:53:17.252728+00:00",
+                "last_used_ip": "192.168.178.201",
+                "token": "5e9c3fac43bcbfccfd6ad0715067e66b568c60d69b71f3bb590985876e65964051d31347d7d9345c0f82fc6e21c6e82e3cdcabcba36dd7bc09e1232a6395877e",
+                "token_type": "normal",
+                "user_id": "486b1d4ad436476d81c8151b69186ee2"
+            },
+            {
+                "access_token_expiration": 1800.0,
+                "client_icon": null,
+                "client_id": "http://192.168.178.4:8123/",
+                "client_name": null,
+                "created_at": "2018-11-01T15:23:34.977519+00:00",
+                "id": "2792669009ba4d5bb59d577a970b03e3",
+                "jwt_key": "adba6c982f721d3706419d23b45369e78a37537b9b1abd951af1447bd11074366e0c05911868e76715d14db2f1f8d5ca120268bbc432ca81f635fba004da2720",
+                "last_used_at": "2018-11-01T15:23:34.978025+00:00",
+                "last_used_ip": "192.168.178.201",
+                "token": "6cdc8cb55603744c7ef6812f9dea2416aa971abdcf124cad27fbb27e48797f4e2fa267f49db8c6284746190c7ebe2dadba5d3480bc49796dfaf1c0f28f9923dd",
+                "token_type": "normal",
+                "user_id": "486b1d4ad436476d81c8151b69186ee2"
+            },
+            {
+                "access_token_expiration": 315360000.0,
+                "client_icon": null,
+                "client_id": null,
+                "client_name": "appdaemon",
+                "created_at": "2018-10-31T16:38:05.171217+00:00",
+                "id": "c5ebf71416fb46888ce1268649c3950c",
+                "jwt_key": "addd934ed4b65a0a6ab97c774c57a633aa5e074cc79199fbfd3419175e8814dbf2e0ffdab15eabd6a4660f5da46b9d2a5f570801eed62505b4b174a3c6adeb89",
+                "last_used_at": "2018-10-31T16:38:05.171742+00:00",
+                "last_used_ip": null,
+                "token": "7e904ab05bb64d23bf73737d4b96962da99911d992967b90221937dc2d617d6a0ec3d4ce2739abf3cfbbdacfbe827d69c697652ec497f21c925ba55425226465",
+                "token_type": "long_lived_access_token",
+                "user_id": "486b1d4ad436476d81c8151b69186ee2"
+            }
+        ],
+        "users": [
+            {
+                "group_ids": [
+                    "745d425900fe4a599d55a5692d49169d"
+                ],
+                "id": "486b1d4ad436476d81c8151b69186ee2",
+                "is_active": true,
+                "is_owner": true,
+                "name": "Kian",
+                "system_generated": false
+            }
+        ]
+    },
+    "key": "auth",
+    "version": 1
+}

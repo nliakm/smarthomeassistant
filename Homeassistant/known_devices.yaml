@@ -1,0 +1,104 @@
+
+carotablet:
+  hide_if_away: false
+  icon:
+  mac: E0:99:71:FE:2F:51
+  name: Caro-Tablet
+  picture:
+  track: false
+
+fritzpowerline_530e:
+  hide_if_away: false
+  icon:
+  mac: E8:DF:70:A4:DA:A4
+  name: Powerline
+  picture:
+  track: false
+
+fritzpowerline_530e_2:
+  hide_if_away: false
+  icon:
+  mac: E8:DF:70:A4:DA:A3
+  name: Powerline_2
+  picture:
+  track: false
+
+lgg6:
+  hide_if_away: false
+  icon:
+  mac: DC:0B:34:C9:0A:AA
+  name: LG-G6
+  picture:
+  track: true
+
+tvue40es6340:
+  hide_if_away: false
+  icon:
+  mac: DC:71:44:59:70:14
+  name: SmartTV
+  picture:
+  track: true
+
+amazonfiretvstick:
+  hide_if_away: false
+  icon:
+  mac: 0C:47:C9:3C:D1:04
+  name: FireTV 
+  picture: https://cdn-images-1.medium.com/max/1200/1*h3FXI0pFOY1qgk1EnZI96Q.png
+  track: true
+
+fritzbox:
+  hide_if_away: false
+  icon:
+  mac: E8:DF:70:7C:51:2C
+  name: fritz.box
+  picture:
+  track: false
+
+hassbian:
+  hide_if_away: false
+  icon:
+  mac: B8:27:EB:69:CF:8A
+  name: hassbian
+  picture:
+  track: false
+
+manjaro:
+  hide_if_away: false
+  icon:
+  mac: 5C:C5:D4:99:98:D7
+  name: Laptop
+  picture:
+  track: true
+
+pihole:
+  hide_if_away: false
+  icon:
+  mac: B8:27:EB:17:5F:76
+  name: Pihole DNS
+  picture: https://decatec.de/wp-content/uploads/2018/08/Pi-hole-logo.png
+  track: true
+
+huaweip9:
+  hide_if_away: false
+  icon:
+  mac: F8:23:B2:E2:AB:99
+  name: HUAWEI-P9
+  picture:
+  track: false
+
+laptop29fbfpja:
+  hide_if_away: false
+  icon:
+  mac: 64:6E:69:DA:CE:61
+  name: LAPTOP-29FBFPJA
+  picture:
+  track: false
+
+steamlink2d02:
+  hide_if_away: false
+  icon:
+  mac: E0:31:9E:16:F1:19
+  name: steamlink-2D02
+  picture:
+  track: true
