@@ -1,0 +1,16 @@
+appdaemon:
+  threads: 10
+  plugins:
+    HASS:
+      type: hass
+      ha_url: http://192.168.178.4:8123
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjNWViZjcxNDE2ZmI0Njg4OGNlMTI2ODY0OWMzOTUwYyIsImV4cCI6MTg1NjM2Mzg4NSwiaWF0IjoxNTQxMDAzODg1fQ.0xlU6Ltr0gi_kalmgr8eJbZnd871YWBhL2dQ5HWr9ks
+hadashboard:
+  dash_url: http://192.168.178.4:5050
+  rss_feeds:
+    - feed: https://news.ycombinator.com/rss
+      target: rss.hn
+    - feed: http://www.tagesschau.de/newsticker.rdf
+      target: rss.tagesschau
+  rss_update: 300
+

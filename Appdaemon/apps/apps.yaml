@@ -1,0 +1,8 @@
+hello_world:
+  module: hello
+  class: HelloWorld
+
+Presence:
+  announce: lgg6 
+  class: Presence
+  notify: '1'

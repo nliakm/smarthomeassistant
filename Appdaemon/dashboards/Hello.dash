@@ -1,0 +1,88 @@
+title: Dashboard
+widget_dimensions: [120, 120]
+widget_margins: [5, 5]
+columns: 8
+
+lgg6_presence:
+  widget_type: device_tracker
+  title: Kian
+  device: lgg6
+  icon_on: mdi-cellphone
+  icon_off: mdi-cellphone-off
+  title_style: "font-size: 16pt; font-weight: bold;"
+
+switch_tv:
+  widget_type: switch
+  entity: media_player.ue40es6340_ue40es6340
+  title: SmartTV
+  title2: ausschalten
+  title_style: "font-size: 16pt; font-weight: thin;"
+  icon_off: mdi-television-classic-off
+  icon_on: mdi-television-classic-on
+
+weather:
+  widget_type: weather
+  title_style: "font-size: 16pt; font-weight: bold;"
+  show_forecast: 1
+  prefer_icons: 1
+  forecast_title: Morgen
+
+clock:
+  widget_type: clock
+  time_format: 24hr
+  date_format_country: de
+  date_format_options:
+    weekday: "short"
+    day: "numeric"
+    month: "numeric"
+    year: "numeric"
+  time_style: "color: yellow; font-size: 40pt; font-weight: bold;"
+  date_style: "font-size: 16pt; font-weight: bold;"
+  #widget_style: "background: blue;" 
+
+hn_rss_feed:
+  widget_type: rss
+  title2: HN most recent top story
+  entity: rss.hn
+  recent: 10
+  interval: 300
+  text_style: "font-size: 16pt;"
+
+reload_dash:
+  widget_type: reload
+  title: Dashboard
+  title2: Aktualisieren 
+  icon_inactive: mdi-reload
+  icon_active: mdi-history
+  title_style: "font-size: 16pt;"
+
+smarttv_status:
+  title: SmartTV
+  widget_type: icon
+  entity: media_player.ue40es6340_ue40es6340
+  title_style: "font-size: 16pt;"
+  icons:
+    "unknown":
+      icon: mdi-television-classic
+      style: "color: green"
+    "off":
+      icon: mdi-television-classic-off
+
+humidity:
+  widget_type: gauge
+  title: Luftfeuchtigkeit
+  entity: sensor.dark_sky_humidity
+  min: 0
+  max: 100
+  units: ""
+
+iframe_logo:
+  widget_type: iframe
+  img_list: 
+    - https://dasmaeh.de/wp-content/uploads/sites/2/2018/01/ha_logo_hassio.png 
+
+layout:
+  - iframe_logo(3x1),reload_dash
+  - clock(2x1), humidity(2x2)
+  - weather(2x2), switch_tv
+  - hn_rss_feed(3x1)
