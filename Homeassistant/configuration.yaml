@@ -12,8 +12,8 @@ homeassistant:
   time_zone: Europe/Berlin
   # Customization file
   customize: !include customize.yaml
-  auth_providers:
-    - type: trusted_networks
+  #  auth_providers:
+  #    - type: trusted_networks
 
 # Show links to resources in log and frontend
 #introduction:
@@ -26,14 +26,14 @@ config:
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 http:
-  base_url: hassbian.local:8123
+  base_url: 192.168.178.4:8123
   #  api_password: !secret api_password
-  trusted_networks:
-    - 127.0.0.1
-    - ::1
-    - 192.0.0.0/32
-    - 192.168.178.201
-    - fd00::/8
+  #  trusted_networks:
+  #    - 127.0.0.1
+  #   - ::1
+  #    - 192.0.0.0/32
+  #    - 192.168.178.201
+  #    - fd00::/8
 # Checks for available updates
 # Note: This component will send some information about your system to
 # the developers to assist with development of Home Assistant.
@@ -46,9 +46,6 @@ updater:
 # Discover some devices automatically
 discovery:
 
-# Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
-
 # Enables support for tracking state changes over time
 history:
 
@@ -60,10 +57,43 @@ map:
 
 # Track the sun
 sun:
+        
+media_player:
+  - platform: spotify
+    client_id: 'e487f5ed1c3a4be084b3deb9620e15a0'
+    client_secret: 'f66d47cc1cda43a2906926ea1d299509'
 
+  - platform: firetv
+    name: FireTV
+    host: 192.168.178.3
+    adbkey: "/home/homeassistant/.homeassistant/keys/adbkey"
+
+weather:
+  - platform: yweather
+
+shopping_list:
 # Sensors
 sensor:
+  - platform: deutsche_bahn
+    from: Braunschweig
+    to: Hamburg
+
   - platform: fritzbox_netmonitor
+
+  - platform: pi_hole
+    host: 192.168.178.10
+    verify_ssl: false
+    monitored_conditions:
+      - dns_queries_today
+      - ads_blocked_today
+      - ads_percentage_today
+
+  - platform: time_date
+    display_options:
+      - 'time'
+    #  - platform: custom:feedparser
+    #    name: HN
+    #    feed_url: 'https://news.ycombinator.com/rss'
 
 # Weather dark sky
 #weather:
@@ -89,14 +119,28 @@ sensor:
       - summary
       - daily_summary
 
-            
-            
-# Text to speech
-tts:
-  - platform: google
+#tts:
+#  - platform: google
 
 # Cloud
-cloud:
+#cloud:
+
+input_boolean:
+  wakeup_enabled:
+    name: "Wake-up Modus"
+    initial: on
+    icon: mdi:theme-light-dark
+  wakeup_weekend:
+    name: "Wake-up am Wochenende"
+    initial: off
+    icon: mdi:calender-blank
+
+input_datetime:
+  wakeup_time:
+    name: "Starte Licht ab"
+    has_time: true
+    has_date: false
+    initial: "06:50"
 
 # Device trackers
 device_tracker:

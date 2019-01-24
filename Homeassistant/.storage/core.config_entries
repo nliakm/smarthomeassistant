@@ -28,6 +28,19 @@
                 "source": "user",
                 "title": "InternetGatewayDeviceV2 - FRITZ!Box 3490",
                 "version": 1
+            },
+            {
+                "connection_class": "local_poll",
+                "data": {
+                    "bridge_id": "ECB5FAFFFE067AB8",
+                    "host": "192.168.178.5",
+                    "username": "6H-QOCTo1grRIpVcsYBv8NDHnG2SgE9Qmq13iPja"
+                },
+                "domain": "hue",
+                "entry_id": "4ecf7c5d93594d26a5d72024fec61aef",
+                "source": "discovery",
+                "title": "Philips hue",
+                "version": 1
             }
         ]
     },

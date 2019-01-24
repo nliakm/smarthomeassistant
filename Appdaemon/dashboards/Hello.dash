@@ -42,7 +42,6 @@ clock:
 
 hn_rss_feed:
   widget_type: rss
-  title2: HN most recent top story
   entity: rss.hn
   recent: 10
   interval: 300
@@ -51,7 +50,7 @@ hn_rss_feed:
 reload_dash:
   widget_type: reload
   title: Dashboard
-  title2: Aktualisieren 
+  title2: Aktualisieren
   icon_inactive: mdi-reload
   icon_active: mdi-history
   title_style: "font-size: 16pt;"
@@ -70,8 +69,8 @@ smarttv_status:
 
 humidity:
   widget_type: gauge
-  title: Luftfeuchtigkeit
-  entity: sensor.dark_sky_humidity
+  title: Regenwahrscheinlichkeit
+  entity: sensor.dark_sky_precip_probability
   min: 0
   max: 100
   units: ""
@@ -79,10 +78,33 @@ humidity:
 iframe_logo:
   widget_type: iframe
   img_list: 
-    - https://dasmaeh.de/wp-content/uploads/sites/2/2018/01/ha_logo_hassio.png 
+    - https://dasmaeh.de/wp-content/uploads/sites/2/2018/01/ha_logo_hassio.png
+
+label_licht:
+  widget_type: light
+  title: Wohnzimmer
+  entity: light.wohnzimmer
+  icon_on: mdi-lightbulb-on
+  icon_off: mdi-lightbulb
+
+label_licht_2:
+  widget_type: light
+  title: Schlafzimmer
+  entity: light.schlafzimmer
+  icon_on: mdi-lightbulb-on
+  icon_off: mdi-lightbulb
+
+iframe:
+  widget_type: iframe
+  title: news
+  refresh: 300
+  url_list:
+    - http://192.168.178.10/admin/index.php
 
 layout:
-  - iframe_logo(3x1),reload_dash
-  - clock(2x1), humidity(2x2)
-  - weather(2x2), switch_tv
-  - hn_rss_feed(3x1)
+#  - iframe_logo(3x1), clock(2x1)
+#  - iframe(8x4)
+  - clock(2x1)
+  - reload_dash,weather(2x2)
+  - label_licht
+  - label_licht_2, hn_rss_feed(2x1)

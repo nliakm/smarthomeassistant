@@ -1,0 +1,173 @@
+{
+    "data": {
+        "config": {
+            "title": "Start",
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "entity": "light.schlafzimmer",
+                                    "type": "light"
+                                },
+                                {
+                                    "entity": "light.wohnzimmer",
+                                    "type": "light"
+                                }
+                            ],
+                            "title": "Wetter",
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "input_datetime.wakeup_time"
+                                },
+                                {
+                                    "entity": "input_boolean.wakeup_enabled"
+                                },
+                                {
+                                    "entity": "input_boolean.wakeup_weekend"
+                                }
+                            ],
+                            "title": "Wake-up Automatisierung",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.pi_hole_dns_queries_today",
+                                    "name": "DNS Anfragen"
+                                },
+                                {
+                                    "entity": "sensor.pi_hole_ads_blocked_today",
+                                    "name": "Geblockte Anfragen"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Pihole Statistik letzte 24 Stunden",
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "sensor.pi_hole_ads_percentage_blocked_today",
+                            "max": 100,
+                            "min": 0,
+                            "name": "Anfragen geblockt",
+                            "theme": "default",
+                            "type": "gauge",
+                            "unit": "%"
+                        },
+                        {
+                            "entity": "media_player.firetv",
+                            "type": "media-control"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.dark_sky_summary",
+                                    "name": " "
+                                },
+                                {
+                                    "entity": "sensor.dark_sky_apparent_temperature",
+                                    "name": "Aktuelle Temperatur"
+                                },
+                                {
+                                    "entity": "sensor.dark_sky_humidity",
+                                    "name": "Regenwahrscheinlichkeit"
+                                },
+                                {
+                                    "entity": "sensor.dark_sky_daily_summary",
+                                    "name": " "
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Wetter",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:desktop-mac",
+                    "path": "default_view",
+                    "title": "Startseite"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "columns": 2,
+                            "entities": [
+                                {
+                                    "entity": "light.schlafzimmer"
+                                },
+                                {
+                                    "entity": "light.wohnzimmer"
+                                }
+                            ],
+                            "show_name": true,
+                            "show_state": true,
+                            "type": "glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "input_datetime.wakeup_time"
+                                },
+                                {
+                                    "entity": "input_boolean.wakeup_enabled"
+                                },
+                                {
+                                    "entity": "input_boolean.wakeup_weekend"
+                                }
+                            ],
+                            "title": "Wake-up Automatisierung",
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "media_player.firetv",
+                            "type": "media-control"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.dark_sky_summary",
+                                    "name": " "
+                                },
+                                {
+                                    "entity": "sensor.dark_sky_apparent_temperature",
+                                    "name": "Aktuelle Temperatur"
+                                },
+                                {
+                                    "entity": "sensor.dark_sky_humidity",
+                                    "name": "Regenwahrscheinlichkeit"
+                                },
+                                {
+                                    "entity": "sensor.dark_sky_daily_summary",
+                                    "name": " "
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Wetter",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:cellphone-android",
+                    "title": "Smartphone"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "title": "Einkaufsliste",
+                            "type": "shopping-list"
+                        }
+                    ],
+                    "icon": "mdi:cart",
+                    "title": "Einkaufsliste"
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}

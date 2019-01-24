@@ -102,3 +102,58 @@ steamlink2d02:
   name: steamlink-2D02
   picture:
   track: true
+
+oneplus6:
+  hide_if_away: false
+  icon:
+  mac: 64:A2:F9:84:A3:35
+  name: OnePlus-6
+  picture:
+  track: false
+
+iphoneover9000:
+  hide_if_away: false
+  icon:
+  mac: F0:79:60:3C:84:C0
+  name: iPhoneover9000
+  picture:
+  track: false
+kianpc:
+  hide_if_away: false
+  icon:
+  mac: D8:CB:8A:9D:1F:71
+  name: Kian-PC
+  picture:
+  track: true
+
+huaweip10fe0d67bd0b583b:
+  hide_if_away: false
+  icon:
+  mac: 14:A5:1A:2A:DF:7E
+  name: HUAWEI-P10-fe0d67bd0b583b
+  picture:
+  track: true
+
+philipshue:
+  hide_if_away: false
+  icon:
+  mac: EC:B5:FA:06:7A:B8
+  name: Philips-hue
+  picture:
+  track: true
+
+pc19216817833:
+  hide_if_away: false
+  icon:
+  mac: 58:2F:40:D1:F2:C3
+  name: PC-192-168-178-33
+  picture:
+  track: true
+
+iphonevnjessica:
+  hide_if_away: false
+  icon:
+  mac: 20:EE:28:CB:B0:F4
+  name: iPhonevnJessica
+  picture:
+  track: true

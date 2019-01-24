@@ -1,0 +1,23 @@
+views:
+  - title: Example
+    cards:
+      - type: glance
+        title: Pihole DNS heutige Statistik 
+        entities:
+          - entity: sensor.pihole_dns_queries_today
+            name: Anzahl DNS Anfragen
+          - entity: sensor.pihole_ads_blocked_today
+            name: davon geblockt
+          - entity: sensor.pihole_ads_percentage_blocked_today
+            name: Prozentual geblockt
+      - type: weather-forecast
+        title: Wettervorhersage
+        entity: weather.yweather
+      - type: media-control
+        entity: media_player.spotify
+      - type: light
+        entity: light.hue_ambiance_lamp_2
+        name: Wohnzimmer
+      - type: light
+        entity: light.hue_ambiance_lamp_1
+        name: Schlafzimmer

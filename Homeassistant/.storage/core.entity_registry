@@ -1,0 +1,188 @@
+{
+    "data": {
+        "entities": [
+            {
+                "config_entry_id": "4ecf7c5d93594d26a5d72024fec61aef",
+                "device_id": "e679282734ac4ae193bf1d41a60ebb96",
+                "disabled_by": null,
+                "entity_id": "light.hue_ambiance_lamp_2",
+                "name": null,
+                "platform": "hue",
+                "unique_id": "00:17:88:01:04:ff:b0:ab-0b"
+            },
+            {
+                "config_entry_id": "4ecf7c5d93594d26a5d72024fec61aef",
+                "device_id": "34009651957043eba29fb13e84e259b8",
+                "disabled_by": null,
+                "entity_id": "light.hue_ambiance_lamp_3",
+                "name": null,
+                "platform": "hue",
+                "unique_id": "00:17:88:01:04:cf:8b:d1-0b"
+            },
+            {
+                "config_entry_id": "4ecf7c5d93594d26a5d72024fec61aef",
+                "device_id": "3354963afac64ec39e322684d540527c",
+                "disabled_by": null,
+                "entity_id": "light.hue_ambiance_lamp_1",
+                "name": null,
+                "platform": "hue",
+                "unique_id": "00:17:88:01:04:cf:90:30-0b"
+            },
+            {
+                "config_entry_id": "4901f3332e9340eea05708530af9f8dd",
+                "device_id": "61b821b7a55944618b60e10eac012814",
+                "disabled_by": null,
+                "entity_id": "sensor.fritz_box_3490_kbyte_sec_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-8e6c-E8DF707C512C_kbyte/sec_sent"
+            },
+            {
+                "config_entry_id": "4901f3332e9340eea05708530af9f8dd",
+                "device_id": "87e4fa14de1f420eb1210914562dd93f",
+                "disabled_by": null,
+                "entity_id": "sensor.fritz_box_3490_kbyte_sec_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-8e6c-E8DF707C512C_kbyte/sec_received"
+            },
+            {
+                "config_entry_id": "4901f3332e9340eea05708530af9f8dd",
+                "device_id": "2a961639e37b48abb589e83c1de4299c",
+                "disabled_by": null,
+                "entity_id": "sensor.fritz_box_3490_packets_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-8e6c-E8DF707C512C_packets_sent"
+            },
+            {
+                "config_entry_id": "4901f3332e9340eea05708530af9f8dd",
+                "device_id": "149b92d12a8a4e3fbd6031d3487db59e",
+                "disabled_by": null,
+                "entity_id": "sensor.fritz_box_3490_packets_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-8e6c-E8DF707C512C_packets_received"
+            },
+            {
+                "config_entry_id": "a85afe4269bf4ca9b1b2a166d94d1c0e",
+                "device_id": "c632ad650ff54ea8ab81e6cf56c47a74",
+                "disabled_by": null,
+                "entity_id": "sensor.internetgatewaydevicev2_fritz_box_3490_kbyte_sec_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-9f6c-E8DF707C512C_kbyte/sec_sent"
+            },
+            {
+                "config_entry_id": "a85afe4269bf4ca9b1b2a166d94d1c0e",
+                "device_id": "58d5abc88a2e42358fc5b9d819670193",
+                "disabled_by": null,
+                "entity_id": "sensor.internetgatewaydevicev2_fritz_box_3490_packets_sec_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-9f6c-E8DF707C512C_packets/sec_received"
+            },
+            {
+                "config_entry_id": "a85afe4269bf4ca9b1b2a166d94d1c0e",
+                "device_id": "27768d9043ab40e089d00d5b100730a0",
+                "disabled_by": null,
+                "entity_id": "sensor.internetgatewaydevicev2_fritz_box_3490_packets_sec_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-9f6c-E8DF707C512C_packets/sec_sent"
+            },
+            {
+                "config_entry_id": "a85afe4269bf4ca9b1b2a166d94d1c0e",
+                "device_id": "02fbdfb255b94f659278f84951e88cba",
+                "disabled_by": null,
+                "entity_id": "sensor.internetgatewaydevicev2_fritz_box_3490_bytes_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-9f6c-E8DF707C512C_bytes_sent"
+            },
+            {
+                "config_entry_id": "a85afe4269bf4ca9b1b2a166d94d1c0e",
+                "device_id": "85e5dc7eaec94c639f8b559173988c8a",
+                "disabled_by": null,
+                "entity_id": "sensor.internetgatewaydevicev2_fritz_box_3490_bytes_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-9f6c-E8DF707C512C_bytes_received"
+            },
+            {
+                "config_entry_id": "a85afe4269bf4ca9b1b2a166d94d1c0e",
+                "device_id": "94036d61c8e0464789d79b0e9659f05c",
+                "disabled_by": null,
+                "entity_id": "sensor.internetgatewaydevicev2_fritz_box_3490_packets_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-9f6c-E8DF707C512C_packets_sent"
+            },
+            {
+                "config_entry_id": "a85afe4269bf4ca9b1b2a166d94d1c0e",
+                "device_id": "bb7b08ca11eb44daa8a993c2aa00ff1b",
+                "disabled_by": null,
+                "entity_id": "sensor.internetgatewaydevicev2_fritz_box_3490_packets_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-9f6c-E8DF707C512C_packets_received"
+            },
+            {
+                "config_entry_id": "a85afe4269bf4ca9b1b2a166d94d1c0e",
+                "device_id": "3c87444004c2473ca74b982e88d9fc28",
+                "disabled_by": null,
+                "entity_id": "sensor.internetgatewaydevicev2_fritz_box_3490_kbyte_sec_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-9f6c-E8DF707C512C_kbyte/sec_received"
+            },
+            {
+                "config_entry_id": "4901f3332e9340eea05708530af9f8dd",
+                "device_id": "8195335d7da2466186da929fef1f7e47",
+                "disabled_by": null,
+                "entity_id": "sensor.fritz_box_3490_packets_sec_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-8e6c-E8DF707C512C_packets/sec_received"
+            },
+            {
+                "config_entry_id": "4901f3332e9340eea05708530af9f8dd",
+                "device_id": "1219d3dca9a24fd394de3c616ff58bdd",
+                "disabled_by": null,
+                "entity_id": "sensor.fritz_box_3490_packets_sec_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-8e6c-E8DF707C512C_packets/sec_sent"
+            },
+            {
+                "config_entry_id": "4901f3332e9340eea05708530af9f8dd",
+                "device_id": "725053c0293d46539bd971fc3babc3fe",
+                "disabled_by": null,
+                "entity_id": "sensor.fritz_box_3490_bytes_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-8e6c-E8DF707C512C_bytes_received"
+            },
+            {
+                "config_entry_id": "4901f3332e9340eea05708530af9f8dd",
+                "device_id": "c9ca1ac874fb4d8fa696e95f97709418",
+                "disabled_by": null,
+                "entity_id": "sensor.fritz_box_3490_bytes_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-8e6c-E8DF707C512C_bytes_sent"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "media_player.ue40es6340_ue40es6340",
+                "name": "Samsung Smart TV",
+                "platform": "samsungtv",
+                "unique_id": "0e4e1c00-00f0-1000-8d06-c4731edbb53c"
+            }
+        ]
+    },
+    "key": "core.entity_registry",
+    "version": 1
+}

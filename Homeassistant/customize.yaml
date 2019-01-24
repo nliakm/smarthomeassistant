@@ -1,0 +1,5 @@
+sensor.fritz_netmonitor:
+  friendly_name: Fritzbox
+  icon: 'mdi: router-wireless'
+sensor.hamburg_to_braunschweig:
+  friendly_name: HH - BS

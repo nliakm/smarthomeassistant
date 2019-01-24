@@ -1,0 +1,406 @@
+{
+    "data": [
+        {
+            "last_seen": "2019-01-24T13:24:20.010954+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Kian-PC",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "2ff4e665826f4205af2a0ffb2cfb968f",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.kianpc",
+                "last_changed": "2019-01-24T12:54:08.668601+00:00",
+                "last_updated": "2019-01-24T12:54:08.668601+00:00",
+                "state": "not_home"
+            }
+        },
+        {
+            "last_seen": "2019-01-24T13:24:20.010954+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Laptop",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "c9537ced1dcd43fda4adb2cd44380bbb",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.manjaro",
+                "last_changed": "2019-01-24T12:54:08.652113+00:00",
+                "last_updated": "2019-01-24T12:54:08.652113+00:00",
+                "state": "not_home"
+            }
+        },
+        {
+            "last_seen": "2019-01-24T13:24:20.010954+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Philips-hue",
+                    "gps_accuracy": 0,
+                    "latitude": 52.262845,
+                    "longitude": 10.516442,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "3a79bb97c85d4242925115ea7cea0b31",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.philipshue",
+                "last_changed": "2019-01-24T12:54:08.648057+00:00",
+                "last_updated": "2019-01-24T12:54:10.249666+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2019-01-24T13:24:20.010954+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Wake-up am Wochenende",
+                    "icon": "mdi:calender-blank"
+                },
+                "context": {
+                    "id": "17d7f62973244bc0994ae2b992916c13",
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.wakeup_weekend",
+                "last_changed": "2019-01-24T12:54:05.025780+00:00",
+                "last_updated": "2019-01-24T12:54:05.025780+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-01-24T13:24:20.010954+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Starte Licht ab",
+                    "has_date": false,
+                    "has_time": true,
+                    "hour": 6,
+                    "minute": 51,
+                    "second": 0,
+                    "timestamp": 24660
+                },
+                "context": {
+                    "id": "518f253350ec42a6acc46f34cb42a2ce",
+                    "user_id": "486b1d4ad436476d81c8151b69186ee2"
+                },
+                "entity_id": "input_datetime.wakeup_time",
+                "last_changed": "2019-01-24T12:57:00.457179+00:00",
+                "last_updated": "2019-01-24T12:57:00.457179+00:00",
+                "state": "06:51:00"
+            }
+        },
+        {
+            "last_seen": "2019-01-24T13:24:20.010954+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Wake-me up Schlafzimmer",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "a659e35fc90a4f92a0202854d4e1a49e",
+                    "user_id": null
+                },
+                "entity_id": "automation.wake_me_up_schlafzimmer",
+                "last_changed": "2019-01-24T12:54:18.250258+00:00",
+                "last_updated": "2019-01-24T12:54:18.250258+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-01-24T13:24:20.010954+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "SmartTV",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "f6a8fac4757e4928bb7a5e2537825e99",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.tvue40es6340",
+                "last_changed": "2019-01-24T12:54:08.656237+00:00",
+                "last_updated": "2019-01-24T12:54:08.656237+00:00",
+                "state": "not_home"
+            }
+        },
+        {
+            "last_seen": "2019-01-24T13:24:20.010954+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "LG-G6",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "33983d1c6c2248d8b2045e7833d3621e",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.lgg6",
+                "last_changed": "2019-01-24T12:54:08.654464+00:00",
+                "last_updated": "2019-01-24T12:54:08.654464+00:00",
+                "state": "not_home"
+            }
+        },
+        {
+            "last_seen": "2019-01-24T13:24:20.010954+00:00",
+            "state": {
+                "attributes": {
+                    "entity_picture": "https://decatec.de/wp-content/uploads/2018/08/Pi-hole-logo.png",
+                    "friendly_name": "Pihole DNS",
+                    "gps_accuracy": 0,
+                    "latitude": 52.262845,
+                    "longitude": 10.516442,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "6f03d6024998481e9847d8d59cae2e14",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.pihole",
+                "last_changed": "2019-01-24T12:54:08.647138+00:00",
+                "last_updated": "2019-01-24T12:54:10.482716+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2019-01-24T13:24:20.010954+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "iPhonevnJessica",
+                    "source_type": null
+                },
+                "context": {
+                    "id": "89b7fb6da2e84735805a5cd8075d50aa",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.iphonevnjessica",
+                "last_changed": "2019-01-24T12:54:08.648987+00:00",
+                "last_updated": "2019-01-24T12:54:08.648987+00:00",
+                "state": "not_home"
+            }
+        },
+        {
+            "last_seen": "2019-01-24T13:24:20.010954+00:00",
+            "state": {
+                "attributes": {
+                    "entity_picture": "https://cdn-images-1.medium.com/max/1200/1*h3FXI0pFOY1qgk1EnZI96Q.png",
+                    "friendly_name": "FireTV",
+                    "gps_accuracy": 0,
+                    "latitude": 52.262845,
+                    "longitude": 10.516442,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "8fff027bfc1e4b51b6cd87a55ae28041",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.amazonfiretvstick",
+                "last_changed": "2019-01-24T12:54:08.667397+00:00",
+                "last_updated": "2019-01-24T12:54:10.318717+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2019-01-24T13:24:20.010954+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Wake-up Modus",
+                    "icon": "mdi:theme-light-dark"
+                },
+                "context": {
+                    "id": "ecffa391b91e4244826416060e474319",
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.wakeup_enabled",
+                "last_changed": "2019-01-24T12:54:05.026352+00:00",
+                "last_updated": "2019-01-24T12:54:05.026352+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-01-24T13:24:20.010954+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "PC-192-168-178-33",
+                    "gps_accuracy": 0,
+                    "latitude": 52.262845,
+                    "longitude": 10.516442,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "bf2f7881dce34ae3a394710f0c7dd35c",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.pc19216817833",
+                "last_changed": "2019-01-24T12:54:08.653377+00:00",
+                "last_updated": "2019-01-24T12:54:10.204164+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2019-01-24T13:24:20.010954+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "steamlink-2D02",
+                    "source_type": null
+                },
+                "context": {
+                    "id": "fc6ca9a7b668471a9c087c3e579b6450",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.steamlink2d02",
+                "last_changed": "2019-01-24T12:54:08.649924+00:00",
+                "last_updated": "2019-01-24T12:54:08.649924+00:00",
+                "state": "not_home"
+            }
+        },
+        {
+            "last_seen": "2019-01-24T13:24:20.010954+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "HUAWEI-P10-fe0d67bd0b583b",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "55cb1d150be84cbf8dcfc340b4650493",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.huaweip10fe0d67bd0b583b",
+                "last_changed": "2019-01-24T12:54:08.664934+00:00",
+                "last_updated": "2019-01-24T12:54:08.664934+00:00",
+                "state": "not_home"
+            }
+        },
+        {
+            "last_seen": "2019-01-23T15:31:31.311475+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Hour",
+                    "icon": "mdi:clock-in",
+                    "initial": 6.0,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "ee3f155b2b4e43a6ad9e552dac27f506",
+                    "user_id": null
+                },
+                "entity_id": "input_number.wakeup_hour",
+                "last_changed": "2019-01-23T15:29:59.717341+00:00",
+                "last_updated": "2019-01-23T15:29:59.717341+00:00",
+                "state": "6.0"
+            }
+        },
+        {
+            "last_seen": "2019-01-23T15:31:31.311475+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Wakeup weekends",
+                    "icon": "mdi:power"
+                },
+                "context": {
+                    "id": "549bd0201b8540a193243186f070334a",
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.wakeup_weekends",
+                "last_changed": "2019-01-23T15:29:59.720082+00:00",
+                "last_updated": "2019-01-23T15:29:59.720082+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-01-23T15:31:31.311475+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Enable wakeup light",
+                    "icon": "mdi:power"
+                },
+                "context": {
+                    "id": "e6b5a67939024656a44a74e6a3a00299",
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.wakeup",
+                "last_changed": "2019-01-23T15:29:59.719411+00:00",
+                "last_updated": "2019-01-23T15:29:59.719411+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-01-23T15:31:31.311475+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Light fade-in duration",
+                    "icon": "mdi:clock-in",
+                    "initial": 10.0,
+                    "max": 60.0,
+                    "min": 5.0,
+                    "mode": "slider",
+                    "step": 5.0
+                },
+                "context": {
+                    "id": "3eea2815fd6640348dfae6fc2741453b",
+                    "user_id": null
+                },
+                "entity_id": "input_number.wakeup_duration",
+                "last_changed": "2019-01-23T15:29:59.716667+00:00",
+                "last_updated": "2019-01-23T15:29:59.716667+00:00",
+                "state": "10.0"
+            }
+        },
+        {
+            "last_seen": "2019-01-23T15:31:31.311475+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Wakeup weekends",
+                    "icon": "mdi:power",
+                    "initial": 0.0,
+                    "max": 1.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "45b32cfc2ce4404981d1a98342a1c374",
+                    "user_id": null
+                },
+                "entity_id": "input_number.wakeup_weekends",
+                "last_changed": "2019-01-23T15:29:59.718735+00:00",
+                "last_updated": "2019-01-23T15:29:59.718735+00:00",
+                "state": "0.0"
+            }
+        },
+        {
+            "last_seen": "2019-01-23T15:31:31.311475+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Minutes",
+                    "icon": "mdi:clock-in",
+                    "initial": 30.0,
+                    "max": 55.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 5.0
+                },
+                "context": {
+                    "id": "6803a2de1704483a8a488caa0fcae73d",
+                    "user_id": null
+                },
+                "entity_id": "input_number.wakeup_minutes",
+                "last_changed": "2019-01-23T15:29:59.718052+00:00",
+                "last_updated": "2019-01-23T15:29:59.718052+00:00",
+                "state": "30.0"
+            }
+        }
+    ],
+    "key": "core.restore_state",
+    "version": 1
+}
