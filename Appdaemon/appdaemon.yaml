@@ -4,7 +4,7 @@ appdaemon:
     HASS:
       type: hass
       ha_url: http://192.168.178.4:8123
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjNWViZjcxNDE2ZmI0Njg4OGNlMTI2ODY0OWMzOTUwYyIsImV4cCI6MTg1NjM2Mzg4NSwiaWF0IjoxNTQxMDAzODg1fQ.0xlU6Ltr0gi_kalmgr8eJbZnd871YWBhL2dQ5HWr9ks
+      token: 
 hadashboard:
   dash_url: http://192.168.178.4:5050
   rss_feeds:
@@ -12,5 +12,13 @@ hadashboard:
       target: rss.hn
     - feed: http://www.tagesschau.de/newsticker.rdf
       target: rss.tagesschau
+    - feed: http://rss.cnn.com/rss/edition_technology.rss
+      target: rss.cnn-tech
+    - feed: http://rss.cnn.com/rss/edition_europe.rss
+      target: rss.cnn-eu
+    - feed: http://rss.cnn.com/rss/edition_world.rss
+      target: rss.cnn-world
+    - feed: http://rss.cnn.com/rss/edition_football.rss
+      target: rss.cnn-foot
   rss_update: 300
 
