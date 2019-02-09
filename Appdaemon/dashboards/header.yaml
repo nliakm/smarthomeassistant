@@ -1,0 +1,20 @@
+
+reload:
+  widget_type: reload
+  title2: Reload
+  widget_style: "background: MEDIUMSLATEBLUE;"
+
+temperature:
+   widget_type: multisensor
+   entity: sensor.average_temperature
+   entity2: sensor.average_humidity
+   widget_style: "background: DARKSLATEBLUE;"
+   value_style: "margin-top:-8px;font-size:225%;"
+   unit_style: "margin-top:-3px;"
+   value2_style: "margin-top:-8px;font-size:225%;"
+   unit2_style: "margin-top:-3px;"
+
+clock:
+   widget_type: clock
+   time_format: 24hr
+   widget_style: "background: DARKSLATEBLUE;"
