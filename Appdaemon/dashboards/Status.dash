@@ -1,0 +1,140 @@
+#
+# Main arguments, all optional
+#
+title: Status
+widget_dimensions: [121, 122]
+widget_size: [1, 1]
+widget_margins: [5, 5]
+columns: 10
+rows: 6
+global_parameters:
+    use_comma: 0
+    precision: 0
+    use_hass_icon: 1
+
+
+#
+# Common navigation
+#
+nav_main:
+    widget_type: navigate
+    dashboard: Main
+    title2: Home
+    icon_inactive: mdi-home-assistant
+    widget_style: "background: DARKSLATEBLUE;"
+
+nav_switchboard:
+    widget_type: navigate
+    dashboard: Switchboard
+    title2: Switchboard
+    icon_inactive: mdi-nintendo-switch
+    widget_style: "background: DARKSLATEBLUE;"
+
+nav_weather:
+    widget_type: navigate
+    dashboard: Weather
+    title2: Wetter
+    icon_inactive: mdi-weather-partlycloudy
+    widget_style: "background: DARKSLATEBLUE;"
+
+nav_status:
+    widget_type: navigate
+    dashboard: Status
+    title2: Status
+    icon_inactive: mdi-information-outline
+    widget_style: "background: MEDIUMSLATEBLUE;"
+
+nav_spacer:
+    widget_type: label
+    widget_style: "background: DARKSLATEBLUE;"
+
+
+#
+# Header
+#
+label:
+    widget_type: sensor
+    title2: Status
+    entity: sensor.version_friendly
+    sub_entity: sensor.update_available
+    widget_style: "background: MEDIUMSLATEBLUE;"
+    title2_style: "text-transform: uppercase; letter-spacing: 0.35em;"
+    text_style: "font-size: 300%;"
+    state_text_style: "font-size:125%;padding-bottom:0.15em;background-color:MEDIUMSLATEBLUE;"
+
+
+#
+# System
+#
+grafana_logo:
+    widget_type: iframe
+    img_list:
+      - https://logz.io/wp-content/uploads/2017/02/monitoring-dockerized-elk-stack-1.jpg
+uptime:
+    widget_type: sensor
+    title: Uptime HASS
+    entity: sensor.uptime_friendly
+
+uptime_host:
+    widget_type: iframe
+    refresh: 180
+    url_list:
+      - http://192.168.178.10:3000/dashboard-solo/db/node-exporter-full?orgId=1&var-job=node&var-node=192.168.178.4&var-port=9100&from=1549219934860&to=1549223534861&theme=dark&panelId=15
+
+cpu_use:
+    widget_type: iframe
+    refresh: 180
+    url_list:
+      - http://192.168.178.10:3000/dashboard-solo/db/node-exporter-full?orgId=1&var-job=node&var-node=192.168.178.4&var-port=9100&from=1549220102637&to=1549223702637&theme=dark&panelId=20
+
+cpu_cores:
+    widget_type: iframe
+    url_list:
+      - http://192.168.178.10:3000/dashboard-solo/db/node-exporter-full?orgId=1&var-job=node&var-node=192.168.178.4&var-port=9100&panelId=14&from=1549220536564&to=1549224136564&theme=dark
+
+memory_use:
+    widget_type: iframe
+    refresh: 180
+    url_list:
+      - http://192.168.178.10:3000/dashboard-solo/db/node-exporter-full?orgId=1&var-job=node&var-node=192.168.178.4&var-port=9100&from=1549220056711&to=1549223656711&theme=dark&panelId=16
+
+memory_total:
+    widget_type: iframe
+    url_list:
+      - http://192.168.178.10:3000/dashboard-solo/db/node-exporter-full?orgId=1&var-job=node&var-node=192.168.178.4&var-port=9100&panelId=75&from=1549220497990&to=1549224097990&theme=dark
+
+disk_use:
+    widget_type: iframe
+    refresh: 180
+    url_list:
+      - http://192.168.178.10:3000/dashboard-solo/db/node-exporter-full?orgId=1&var-job=node&var-node=192.168.178.4&var-port=9100&panelId=154&from=1549220211338&to=1549223811339&theme=dark
+
+disk_total:
+    widget_type: iframe
+    url_list:
+      - http://192.168.178.10:3000/dashboard-solo/db/node-exporter-full?orgId=1&var-job=node&var-node=192.168.178.4&var-port=9100&panelId=23&from=1549220455943&to=1549224055943&theme=dark
+
+cpu_load:
+    widget_type: iframe
+    refresh: 180
+    url_list:
+      - http://192.168.178.10:3000/dashboard-solo/db/node-exporter-full?panelId=7&orgId=1&from=1549221637486&to=1549225237486&var-job=node&var-node=172.19.0.4&var-port=9100&theme=dark
+
+network_errors:
+    widget_type: iframe
+    refresh: 180
+    url_list:
+      - http://192.168.178.10:3000/dashboard-solo/db/node-exporter-full?orgId=1&var-job=node&var-node=192.168.178.4&var-port=9100&from=1549221027320&to=1549224627320&panelId=142&theme=dark
+
+
+#
+# Layout
+#
+layout:
+    - include: header
+    - nav_main,         label(6x1), reload, clock(2x1)
+    - nav_weather,      cpu_use(2x1),memory_use(2x1),disk_use(2x1),grafana_logo(3x1)
+    - nav_spacer(1x3),  cpu_cores(2x1),memory_total(2x1),disk_total(2x1), uptime_host(3x1)
+    -                   cpu_load(9x3)
+    -                   
+    - nav_status
