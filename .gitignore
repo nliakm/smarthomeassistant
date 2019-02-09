@@ -5,3 +5,5 @@ home-assistant.log
 known_devices.yaml
 .uuid
 keys/
+.cloud/
+.storage/
