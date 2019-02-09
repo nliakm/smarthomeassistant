@@ -1,0 +1,740 @@
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background-color: #222;
+  font-size: 15px;
+  color: #fff;
+  padding: 0;
+  line-height: 1;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Open Sans', 'Arial'
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+
+img, object {
+  max-width: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;}
+
+iframe {
+  max-width: 100%;
+}
+  
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+td {
+  vertical-align: middle;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, p {
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  margin-bottom: 6px;
+  text-align: center;
+  font-size: 100%;
+  font-weight: 200;
+}
+h2 {
+  font-size: 300%;
+  font-weight: 400;
+  color: #fff;
+}
+h3 {
+  font-size: 125%;
+  font-weight: 300;
+  color: #fff;
+}
+
+input {
+  background-color: #444;
+  border: none;
+}
+
+.dashboard_main {
+	margin: 0px auto;
+}
+
+.gridster {
+  margin: 0px auto;
+}
+
+.icon-background {
+  pointer-events: none;
+  width: 100%!important;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.1;
+  font-size: 1375%;
+  text-align: center;
+  margin-top: 82px;
+}
+
+.list-nostyle {
+  list-style: none;
+}
+
+.gridster ul {
+  list-style: none;
+}
+
+.gs-w {
+  width: 100%;
+  display: table;
+  cursor: pointer;
+  z-index: auto !important;
+}
+
+.iframe {
+  position: relative;
+  overflow: hidden;  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;}
+
+.widget {
+  padding: 0px 0px;
+  text-align: center;
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  background-color: #444444;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;}
+
+.title {
+  color: #fff;
+}
+
+.icon-inactive {
+  color: #888;
+}
+
+.icon-active {
+  color: #aaff00;
+}
+
+
+#container {
+  padding-top: 0px;
+}
+
+.modalDialog {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 9999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialogOpen {
+	opacity:0.95;
+	pointer-events: auto;
+}
+
+.modalDialogClose {
+	opacity:0;
+	pointer-events: none;
+}
+
+.modalDialog > div {
+	width: 275px;
+	position: relative;
+	margin: 3% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+}
+
+.modalDialogCloseButton {
+	line-height: 50px;
+	position: absolute;
+	right: -25px;
+	text-align: center;
+	top: -20px;
+	width: 50px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+}
+
+.modalDialogCloseButton:hover { background: #444; }
+
+.widget-basejavascript-default-nav-main .icon {
+	position: absolute;
+	top: 43px;
+	width: 100%;
+}
+
+.widget-basejavascript-default-nav-main .title {
+	position: absolute;
+	top: 5px;
+	width: 100%;
+}
+
+.widget-basejavascript-default-nav-main .title2 {
+	position: absolute;
+	top: 23px;
+	width: 100%;
+}
+
+.widget-basejavascript-default-nav-main .toggle-area {
+	z-index: 10;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.widget-basedisplay-default-label .unit {
+	font-size: 225%;
+	font-weight: 400;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.widget-basedisplay-default-label .value {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.widget-basedisplay-default-label .valueunit {
+	width: 100%;
+	vertical-align: middle;
+}
+
+.widget-basedisplay-default-label .title {
+	position: absolute;
+	top: 5px;
+	width: 100%;
+}
+
+.widget-basedisplay-default-label .title2 {
+	position: absolute;
+	top: 23px;
+	width: 100%;
+}
+
+.widget-basedisplay-default-label .state_text {
+	position: absolute;
+	bottom: -3px;
+	width: 100%;
+}
+
+.widget-basejavascript-default-reload .icon {
+	position: absolute;
+	top: 43px;
+	width: 100%;
+}
+
+.widget-basejavascript-default-reload .title {
+	position: absolute;
+	top: 5px;
+	width: 100%;
+}
+
+.widget-basejavascript-default-reload .title2 {
+	position: absolute;
+	top: 23px;
+	width: 100%;
+}
+
+.widget-basejavascript-default-reload .toggle-area {
+	z-index: 10;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.widget-baseclock-default-clock.date {
+	position: absolute;
+	top: 5px;
+	width: 100%;
+}
+.widget-baseclock-default-clock.time {
+ 	position: absolute;
+	top: 45px;
+	width: 100%;
+}
+.widget-basejavascript-default-nav-weather .icon {
+	position: absolute;
+	top: 43px;
+	width: 100%;
+}
+
+.widget-basejavascript-default-nav-weather .title {
+	position: absolute;
+	top: 5px;
+	width: 100%;
+}
+
+.widget-basejavascript-default-nav-weather .title2 {
+	position: absolute;
+	top: 23px;
+	width: 100%;
+}
+
+.widget-basejavascript-default-nav-weather .toggle-area {
+	z-index: 10;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.widget-baseiframe-default-warning-niedersachsen .title {
+	position: absolute;
+	bottom: 0px;
+    margin: 0px 0px 0px 0px;
+	width: 100%;
+}
+
+.widget-baseiframe-default-warning-niedersachsen .outer-frame {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+    border: none;
+}
+
+.widget-baseiframe-default-warning-niedersachsen .outer-image {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 0;
+    border: none;
+}
+
+.widget-baseiframe-default-warning-niedersachsen .scaled-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.widget-baseiframe-default-warning-niedersachsen .img-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.widget-baseiframe-default-warning-niedersachsen-2 .title {
+	position: absolute;
+	bottom: 0px;
+    margin: 0px 0px 0px 0px;
+	width: 100%;
+}
+
+.widget-baseiframe-default-warning-niedersachsen-2 .outer-frame {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+    border: none;
+}
+
+.widget-baseiframe-default-warning-niedersachsen-2 .outer-image {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 0;
+    border: none;
+}
+
+.widget-baseiframe-default-warning-niedersachsen-2 .scaled-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.widget-baseiframe-default-warning-niedersachsen-2 .img-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.widget-basedisplay-default-nav-spacer .unit {
+	font-size: 225%;
+	font-weight: 400;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.widget-basedisplay-default-nav-spacer .value {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.widget-basedisplay-default-nav-spacer .valueunit {
+	width: 100%;
+	vertical-align: middle;
+}
+
+.widget-basedisplay-default-nav-spacer .title {
+	position: absolute;
+	top: 5px;
+	width: 100%;
+}
+
+.widget-basedisplay-default-nav-spacer .title2 {
+	position: absolute;
+	top: 23px;
+	width: 100%;
+}
+
+.widget-basedisplay-default-nav-spacer .state_text {
+	position: absolute;
+	bottom: -3px;
+	width: 100%;
+}
+
+.widget-basedisplay-default-daily-forecast .unit {
+	font-size: 225%;
+	font-weight: 400;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.widget-basedisplay-default-daily-forecast .value {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.widget-basedisplay-default-daily-forecast .valueunit {
+	width: 100%;
+	vertical-align: middle;
+}
+
+.widget-basedisplay-default-daily-forecast .title {
+	position: absolute;
+	top: 5px;
+	width: 100%;
+}
+
+.widget-basedisplay-default-daily-forecast .title2 {
+	position: absolute;
+	top: 23px;
+	width: 100%;
+}
+
+.widget-basedisplay-default-daily-forecast .state_text {
+	position: absolute;
+	bottom: -3px;
+	width: 100%;
+}
+
+.widget-baseentitydisplay-default-temperature-today .unit {
+	font-size: 225%;
+	font-weight: 400;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.widget-baseentitydisplay-default-temperature-today .value {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.widget-baseentitydisplay-default-temperature-today .valueunit {
+	position: absolute;
+	top: 43px;
+	width: 100%;
+}
+
+.widget-baseentitydisplay-default-temperature-today .title {
+	position: absolute;
+	top: 5px;
+	width: 100%;
+}
+
+.widget-baseentitydisplay-default-temperature-today .title2 {
+	position: absolute;
+	top: 23px;
+	width: 100%;
+}
+
+.widget-baseentitydisplay-default-temperature-today .state_text {
+	position: absolute;
+	bottom: -3px;
+	width: 100%;
+}
+
+.widget-baseentitydisplay-default-temperature-tomorrow .unit {
+	font-size: 225%;
+	font-weight: 400;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.widget-baseentitydisplay-default-temperature-tomorrow .value {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.widget-baseentitydisplay-default-temperature-tomorrow .valueunit {
+	position: absolute;
+	top: 43px;
+	width: 100%;
+}
+
+.widget-baseentitydisplay-default-temperature-tomorrow .title {
+	position: absolute;
+	top: 5px;
+	width: 100%;
+}
+
+.widget-baseentitydisplay-default-temperature-tomorrow .title2 {
+	position: absolute;
+	top: 23px;
+	width: 100%;
+}
+
+.widget-baseentitydisplay-default-temperature-tomorrow .state_text {
+	position: absolute;
+	bottom: -3px;
+	width: 100%;
+}
+
+.widget-baseentitydisplay-default-temperature-after-tomorrow .unit {
+	font-size: 225%;
+	font-weight: 400;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.widget-baseentitydisplay-default-temperature-after-tomorrow .value {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.widget-baseentitydisplay-default-temperature-after-tomorrow .valueunit {
+	position: absolute;
+	top: 43px;
+	width: 100%;
+}
+
+.widget-baseentitydisplay-default-temperature-after-tomorrow .title {
+	position: absolute;
+	top: 5px;
+	width: 100%;
+}
+
+.widget-baseentitydisplay-default-temperature-after-tomorrow .title2 {
+	position: absolute;
+	top: 23px;
+	width: 100%;
+}
+
+.widget-baseentitydisplay-default-temperature-after-tomorrow .state_text {
+	position: absolute;
+	bottom: -3px;
+	width: 100%;
+}
+
+.widget-basejavascript-default-nav-status .icon {
+	position: absolute;
+	top: 43px;
+	width: 100%;
+}
+
+.widget-basejavascript-default-nav-status .title {
+	position: absolute;
+	top: 5px;
+	width: 100%;
+}
+
+.widget-basejavascript-default-nav-status .title2 {
+	position: absolute;
+	top: 23px;
+	width: 100%;
+}
+
+.widget-basejavascript-default-nav-status .toggle-area {
+	z-index: 10;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.widget-basedisplay-default-weekly-forecast .unit {
+	font-size: 225%;
+	font-weight: 400;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.widget-basedisplay-default-weekly-forecast .value {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.widget-basedisplay-default-weekly-forecast .valueunit {
+	width: 100%;
+	vertical-align: middle;
+}
+
+.widget-basedisplay-default-weekly-forecast .title {
+	position: absolute;
+	top: 5px;
+	width: 100%;
+}
+
+.widget-basedisplay-default-weekly-forecast .title2 {
+	position: absolute;
+	top: 23px;
+	width: 100%;
+}
+
+.widget-basedisplay-default-weekly-forecast .state_text {
+	position: absolute;
+	bottom: -3px;
+	width: 100%;
+}
+
+.widget-baseiconsensor-default-weather-icon-today {
+	position: relative;
+}
+
+.widget-baseiconsensor-default-weather-icon-today .title {
+	position: absolute;
+	top: 5px;
+	width: 100%;
+}
+
+.widget-baseiconsensor-default-weather-icon-today .title2 {
+	position: absolute;
+	top: 23px;
+	width: 100%;
+}
+
+.widget-baseiconsensor-default-weather-icon-today .state_text {
+	position: absolute;
+	bottom: -3px;
+	width: 100%;
+}
+
+.widget-baseiconsensor-default-weather-icon-today .icon {
+	position: absolute;
+	top: 45px;
+	width: 100%;
+}
+
+.widget-baseiconsensor-default-weather-icon-tomorrow {
+	position: relative;
+}
+
+.widget-baseiconsensor-default-weather-icon-tomorrow .title {
+	position: absolute;
+	top: 5px;
+	width: 100%;
+}
+
+.widget-baseiconsensor-default-weather-icon-tomorrow .title2 {
+	position: absolute;
+	top: 23px;
+	width: 100%;
+}
+
+.widget-baseiconsensor-default-weather-icon-tomorrow .state_text {
+	position: absolute;
+	bottom: -3px;
+	width: 100%;
+}
+
+.widget-baseiconsensor-default-weather-icon-tomorrow .icon {
+	position: absolute;
+	top: 45px;
+	width: 100%;
+}
+
+.widget-baseiconsensor-default-weather-icon-after-tomorrow {
+	position: relative;
+}
+
+.widget-baseiconsensor-default-weather-icon-after-tomorrow .title {
+	position: absolute;
+	top: 5px;
+	width: 100%;
+}
+
+.widget-baseiconsensor-default-weather-icon-after-tomorrow .title2 {
+	position: absolute;
+	top: 23px;
+	width: 100%;
+}
+
+.widget-baseiconsensor-default-weather-icon-after-tomorrow .state_text {
+	position: absolute;
+	bottom: -3px;
+	width: 100%;
+}
+
+.widget-baseiconsensor-default-weather-icon-after-tomorrow .icon {
+	position: absolute;
+	top: 45px;
+	width: 100%;
+}
+
