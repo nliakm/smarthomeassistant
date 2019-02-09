@@ -80,6 +80,16 @@ iframe_logo:
   img_list: 
     - https://dasmaeh.de/wp-content/uploads/sites/2/2018/01/ha_logo_hassio.png
 
+iframe_disk_pihole:
+  widget_type: iframe
+  url_list:
+    - http://192.168.178.10:3000/dashboard-solo/db/node-exporter-full?orgId=1&var-job=node&var-node=192.168.178.10&var-port=9100&panelId=154&from=1549201912772&to=1549205512772&theme=dark
+
+iframe_disk_hassbian:
+  widget_type: iframe
+  url_list:
+    - http://192.168.178.10:3000/dashboard-solo/db/node-exporter-full?orgId=1&var-job=node&var-node=192.168.178.4&var-port=9100&panelId=154&from=1549201954302&to=1549205554302&theme=dark
+
 label_licht:
   widget_type: light
   title: Wohnzimmer
@@ -94,17 +104,50 @@ label_licht_2:
   icon_on: mdi-lightbulb-on
   icon_off: mdi-lightbulb
 
-iframe:
-  widget_type: iframe
-  title: news
-  refresh: 300
-  url_list:
-    - http://192.168.178.10/admin/index.php
+alarm_group:
+  widget_type: group
+  title: Aufwachautomation
+  entity: alarm_clock
+
+fire_tv:
+  widget_type: media_player
+  title: FireTV
+  entity: media_player.firetv
+  icon_on: mdi-television
+  icon_off: mdi-television-off
+  icon_up: mdi-arrow-up-circle
+  icon_down: mdi-arrow-down-circle
+
+input_fadetime:
+  widget_type: input_slider
+  title: Fade-in Time
+  entity: input_number.wakeup_duration
+  units: Minuten
+
+input_wakeuptime:
+  widget_type: input_number
+  title: Weckzeit
+  entity: input_datetime.wakeup_time
+#  value_style: number
+#  use_comma: 2
+
+boolean_weekend:
+  widget_type: input_boolean
+  entity: input_boolean.wakeup_weekend
+  title: Wake-up am Wochenende
+  icon_on: mdi-checkbox-marked
+  icon_off: mdi-close-box
+
+boolean_enabled:
+  widget_type: input_boolean
+  entity: input_boolean.wakeup_enabled
+  title: Wake-up Modus
+  icon_on: mdi-checkbox-marked
+  icon_off: mdi-close-box
 
 layout:
 #  - iframe_logo(3x1), clock(2x1)
-#  - iframe(8x4)
-  - clock(2x1)
-  - reload_dash,weather(2x2)
-  - label_licht
-  - label_licht_2, hn_rss_feed(2x1)
+  - weather(2x2), input_wakeuptime(2x1),clock(2x1)
+  - label_licht,label_licht_2, iframe_disk_pihole(2x1)
+  - fire_tv(2x2), input_fadetime(2x1), iframe_disk_hassbian(2x1)
+  - boolean_weekend, boolean_enabled
