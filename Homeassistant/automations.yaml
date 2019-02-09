@@ -1,27 +1,91 @@
-#[]
-- alias: "Wake-me up Schlafzimmer"
+- alias: Wake-me up Schlafzimmer
   trigger:
     platform: template
-    value_template: "{{ states('sensor.time') == (states.input_datetime.wakeup_time.attributes.timestamp | int | timestamp_custom('%H:%M', False)) }}"
+    value_template: '{{ states(''sensor.time'') == (states.input_datetime.wakeup_time.attributes.timestamp
+      | int | timestamp_custom(''%H:%M'', False)) }}'
   condition:
+  - condition: state
+    entity_id: input_boolean.wakeup_enabled
+    state: 'on'
+  - condition: or
+    conditions:
     - condition: state
-      entity_id: input_boolean.wakeup_enabled
+      entity_id: input_boolean.wakeup_weekend
       state: 'on'
-    - condition: or
-      conditions:
-        - condition: state
-          entity_id: input_boolean.wakeup_weekend
-          state: 'on'
-        - condition: time
-          weekday:
-            - mon
-            - tue
-            - wed
-            - thu
-            - fri
+    - condition: time
+      weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
   action:
-    - service: light.turn_on
+  - service: light.turn_on
+    entity_id: light.schlafzimmer
+    data_template:
+      transition: '{{ (states.input_number.wakeup_duration.state | float | multiply(60))
+        }}'
+      brightness: 255
+  id: 064e4dfe6e9b4952b1a05a6d3af37fbe
+- alias: Helligkeit Schlafzimmer
+  trigger:
+    platform: state
+    entity_id: input_number.brightness_schlafzimmer
+  condition:
+  - condition: state
+    entity_id: light.schlafzimmer
+    state: 'on'
+  action:
+  - service: light.turn_on
+    data_template:
       entity_id: light.schlafzimmer
-      data:
-        transition: 1200
-        brightness: 255
+      brightness: '{{ (states.input_number.brightness_schlafzimmer.state | int ) }}'
+  id: da43df132aa04d5ab4d689ec3fda43cb
+- id: ed179d32e9c240889045026b0c89675c
+  alias: Helligkeit Wohnzimmer
+  trigger:
+  - entity_id: input_number.brightness_wohnzimmer
+    platform: state
+  condition:
+  - condition: state
+    entity_id: light.wohnzimmer
+    state: 'on'
+  action:
+  - data_template:
+      brightness: '{{ (states.input_number.brightness_wohnzimmer.state | int ) }}'
+    entity_id: light.wohnzimmer
+    service: light.turn_on
+- alias: Lighting - Trigger scene (Bedroom)
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_select.bedroom_scenes
+  condition:
+    condition: template
+    value_template: '{{ not is_state(''input_select.bedroom_scenes'' , ''Select'')
+      }}'
+  action:
+    service: script.set_hue_scene
+    data_template:
+      group: '{{ states(''input_select.lamp'') }}'
+      scene: '{{ states(''input_select.bedroom_scenes'') }}'
+  id: 8aaa25379edd46e9963bcfcd5cba7f64
+- id: '1549559219132'
+  alias: Home Kino
+  trigger:
+  - entity_id: media_player.firetv
+    from: standby
+    platform: state
+    to: playing
+  condition:
+  - condition: state
+    entity_id: light.wohnzimmer
+    state: 'on'
+  - condition: state
+    entity_id: input_boolean.kino_modus
+    state: 'on'
+  action:
+  - data_template:
+      group: Wohnzimmer
+      scene: Nachtlicht
+    service: script.set_hue_scene

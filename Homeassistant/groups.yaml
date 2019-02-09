@@ -48,9 +48,10 @@ climate:
     - sensor.dark_sky_daily_summary
     - sensor.dark_sky_icon
     - sensor.dark_sky_icon_1
-
+  
+  
 light:
-  name: Lichtmanagement
+  name: "Lichtmanagement"
   view: true
   entities:
     - light.wohnzimmer
@@ -60,5 +61,6 @@ alarm_clock:
   name: "Wake-up Licht"
   entities:
     - input_datetime.wakeup_time
-    - input_boolean.wakup_enabled
-    - input_boolean.wakup_weekend
+    - input_boolean.wakeup_enabled
+    - input_boolean.wakeup_weekend
+    - input_number.wakeup_duration

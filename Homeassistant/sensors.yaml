@@ -1,0 +1,119 @@
+### Sensors ###
+
+# Fritzbox
+#- platform: fritzbox_netmonitor
+#  host: 192.168.178.1
+
+# Pihole
+- platform: pi_hole
+  host: 192.168.178.10
+  verify_ssl: false
+  monitored_conditions:
+    - dns_queries_today
+    - ads_blocked_today
+    - ads_percentage_today
+
+# Time & Date
+- platform: time_date
+  display_options:
+    - 'time'
+
+# Dark Sky Weather
+- platform: darksky
+  api_key: !secret dark_sky_api_key
+  language: de
+  update_interval: 300
+  forecast:
+    - 0
+    - 1
+    - 2
+  monitored_conditions:
+    - temperature
+    - apparent_temperature
+    - humidity
+    - precip_probability
+    - precip_intensity
+    - precip_type
+    - wind_speed
+    - wind_bearing
+    - pressure
+    - icon
+    - summary
+    - hourly_summary
+    - daily_summary
+    - temperature_high
+    - temperature_low
+    - uv_index
+    - sunrise_time
+    - sunset_time
+
+# SYSTEMMONITOR
+- platform: systemmonitor
+  scan_interval: 60
+  resources:
+    - type: disk_use
+      arg: /home
+    - type: disk_free
+      arg: /home
+    - type: ipv4_address
+      arg: eth0
+    - type: load_1m
+    - type: load_5m
+    - type: load_15m
+    - type: memory_use
+    - type: memory_free
+    - type: processor_use
+    - type: last_boot
+
+# VERSION
+- platform: version
+
+# Friendly version report
+- platform: template
+  sensors:
+    version_friendly:
+      friendly_name: "Home Assistant Version"
+      icon_template: "mdi:update"
+      value_template: >-
+        {% set version = states('sensor.current_version') %}
+
+        Home Assistant {% if version != 'unknown' -%}
+          {{ version }}
+        {%- endif %}
+
+    update_available:
+      friendly_name: "Update Available"
+      icon_template: "mdi:update"
+      value_template: >-
+        {% set version = states('updater.updater') %}
+
+        {% if version != 'unknown' %}
+          Update available: {{ version }}
+        {% endif %}
+
+# File size
+- platform: filesize
+  file_paths:
+    - "/home/homeassistant/.homeassistant/home-assistant_v2.db"
+    - "/home/homeassistant/.homeassistant/home-assistant.log"
+
+- platform: template
+  sensors:
+    database_size:
+      friendly_name: "Database Size"
+      icon_template: "mdi:database"
+      unit_of_measurement: 'MiB'
+      value_template: "{{ states('sensor.homeassistant_v2db') | round }}"
+
+    log_size:
+      friendly_name: "Log Size"
+      icon_template: "mdi:history"
+      unit_of_measurement: 'KiB'
+      value_template: >-
+        {% set size = state_attr('sensor.homeassistantlog', 'bytes') %}
+
+        {% if size != None %}
+        {{ (size / 1024) | round }}
+        {% else %}
+          unknown
+        {% endif %}

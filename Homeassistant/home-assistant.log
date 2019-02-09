@@ -1,0 +1,4 @@
+2019-02-07 19:44:39 WARNING (MainThread) [homeassistant.loader] You are using a custom component for media_player.firetv which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2019-02-07 19:44:39 ERROR (Thread-9) [homeassistant.components.sensor.filesize] Filepath /home/homeassistant/.homeassistant/home-assistant_v2.db is not valid or allowed
+2019-02-07 19:44:39 ERROR (Thread-9) [homeassistant.components.sensor.filesize] Filepath /home/homeassistant/.homeassistant/home-assistant.log is not valid or allowed
+2019-02-07 20:37:43 ERROR (MainThread) [homeassistant.components.hue.light] Unable to reach bridge 192.168.178.5 ()

@@ -1,12 +1,10 @@
 homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
-  # Location required to calculate the time the sun rises and sets
   latitude: 52.262845
   longitude: 10.516442
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 0
-  # metric for Metric, imperial for Imperial
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Berlin
@@ -15,15 +13,12 @@ homeassistant:
   #  auth_providers:
   #    - type: trusted_networks
 
-# Show links to resources in log and frontend
-#introduction:
-
 # Enables the frontend
 frontend:
+  javascript_version: latest
 
 # Enables configuration UI
 config:
-
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 http:
   base_url: 192.168.178.4:8123
@@ -34,11 +29,6 @@ http:
   #    - 192.0.0.0/32
   #    - 192.168.178.201
   #    - fd00::/8
-# Checks for available updates
-# Note: This component will send some information about your system to
-# the developers to assist with development of Home Assistant.
-# For more information, please see:
-# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
 updater:
   # Optional, allows Home Assistant developers to focus on popular components.
   # include_used_components: true
@@ -51,9 +41,6 @@ history:
 
 # View all events in a logbook
 logbook:
-
-# Enables a map showing the location of tracked devices
-map:
 
 # Track the sun
 sun:
@@ -68,83 +55,94 @@ media_player:
     host: 192.168.178.3
     adbkey: "/home/homeassistant/.homeassistant/keys/adbkey"
 
-weather:
-  - platform: yweather
-
 shopping_list:
-# Sensors
-sensor:
-  - platform: deutsche_bahn
-    from: Braunschweig
-    to: Hamburg
 
-  - platform: fritzbox_netmonitor
+sensor: !include sensors.yaml
 
-  - platform: pi_hole
-    host: 192.168.178.10
-    verify_ssl: false
-    monitored_conditions:
-      - dns_queries_today
-      - ads_blocked_today
-      - ads_percentage_today
-
-  - platform: time_date
-    display_options:
-      - 'time'
-    #  - platform: custom:feedparser
-    #    name: HN
-    #    feed_url: 'https://news.ycombinator.com/rss'
-
-# Weather dark sky
 #weather:
-  - platform: darksky
-    api_key: !secret dark_sky_api_key
-    language: de
-    update_interval: 300
-    forecast:
-      - 1
-    monitored_conditions:
-      - temperature
-      - apparent_temperature
-      - temperature_min
-      - temperature_max
-      - humidity
-      - precip_probability
-      - precip_intensity
-      - precip_type
-      - wind_speed
-      - wind_bearing
-      - pressure
-      - icon
-      - summary
-      - daily_summary
+#  - platform: darksky
+#    api_key: !secret dark_sky_api_key
+#    mode: daily
+#    language: de
 
-#tts:
-#  - platform: google
+# Input for hue scenes
+input_select:
+  bedroom_scenes:
+    name: Szenen
+    options:
+      - Entspannen
+      - Lesen
+      - Konzentrieren
+      - Nordlichter
+      - Hell
+      - Gedimmt
+      - Nachtlicht
+      - Tropendämmerung
+      - Energie tanken
+      - Sonnenuntergang Savanne
+      - Frühlingsblüten
+    initial: Hell
+    icon: mdi:creation
 
-# Cloud
-#cloud:
+  lamp:
+    name: Zimmer
+    options:
+      - Wohnzimmer
+      - Schlafzimmer
+    initial: Wohnzimmer
+    icon: mdi:door
 
+# Input for hue wake-up automation
 input_boolean:
   wakeup_enabled:
     name: "Wake-up Modus"
-    initial: on
+    initial: off
     icon: mdi:theme-light-dark
   wakeup_weekend:
     name: "Wake-up am Wochenende"
     initial: off
-    icon: mdi:calender-blank
+    icon: mdi:calendar-multiselect
+  kino_modus:
+    name: "Kino Modus"
+    initial: off
+    icon: mdi:theater
 
 input_datetime:
   wakeup_time:
     name: "Starte Licht ab"
     has_time: true
     has_date: false
-    initial: "06:50"
+    initial: "06:51"
+
+input_number:
+  wakeup_duration:
+    name: "Dauer"
+    icon: mdi:clock-in
+    initial: 20
+    min: 0
+    max: 55
+    step: 5
+
+  brightness_schlafzimmer:
+    name: "Hellightkeit Schlafzimmer"
+    icon: mdi:brightness-6
+    initial: 255
+    min: 1
+    max: 255
+    step: 10
+
+  brightness_wohnzimmer:
+    name: "Helligkeit Wohnzimmer"
+    icon: mdi:brightness-6
+    initial: 255
+    min: 1
+    max: 255
+    step: 10
 
 # Device trackers
 device_tracker:
   - platform: fritz
+    host: 192.168.178.1
     #    password: !secret fritzbox_password
     interval_seconds: 30
 
