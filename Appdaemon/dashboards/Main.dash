@@ -1,14 +1,291 @@
-widget_dimensions: [120, 120]
+#
+# Main arguments, all optional
+#
+title: Main Panel
+widget_dimensions: [121, 122]
 widget_size: [1, 1]
 widget_margins: [5, 5]
-columns: 8
+columns: 10
+rows: 6
 global_parameters:
     use_comma: 0
-    precision: 1
+    precision: 0
     use_hass_icon: 1
-    namespace: default
-    devices:
-      clock:
-        widget_type: clock
-      weather:
-        widget_type: weather
+
+
+#
+# Common navigation
+#
+nav_main:
+    widget_type: navigate
+    dashboard: Main
+    title2: Home
+    icon_inactive: mdi-home-assistant
+    widget_style: "background: MEDIUMSLATEBLUE;"
+
+nav_switchboard:
+    widget_type: navigate
+    dashboard: Switchboard
+    title2: Switchboard
+    icon_inactive: mdi-nintendo-switch
+    widget_style: "background: DARKSLATEBLUE;"
+
+nav_weather:
+    widget_type: navigate
+    dashboard: Weather
+    title2: Wetter
+    icon_inactive: mdi-weather-partlycloudy
+    widget_style: "background: DARKSLATEBLUE;"
+
+nav_status:
+    widget_type: navigate
+    dashboard: Status
+    title2: Status
+    icon_inactive: mdi-information-outline
+    widget_style: "background: DARKSLATEBLUE;"
+
+nav_spacer:
+    widget_type: label
+    widget_style: "background: DARKSLATEBLUE;"
+
+
+#
+# Header
+#
+label:
+    widget_type: label
+    title: Home Assistant
+    title2: Smart Home Dashboard
+    #entity: sensor.good_vibes
+    title2_style: "font-size: 300%;"
+    widget_style: "background: MEDIUMSLATEBLUE;"
+    title_style: "text-transform: uppercase; letter-spacing: 0.35em;"
+
+
+#
+# Actions
+#
+modi_title:
+    widget_type: label
+    title2: Modi
+    title2_style: "font-size: 200%;"
+
+scene:
+    widget_type: input_select
+    title2: Set a scene
+    entity: input_select.scene
+    sub_entity: input_select.scene
+    state_text_style: "background-color:#555;"
+    select_style: "background-color:#555;color:$white;"
+
+
+#
+# Weather
+#
+weather_label:
+  widget_type: label
+  title2: "Aktuelles Wetter"
+  title2_style: "font-size: 200%;"
+
+weather:
+  widget_type: weather
+  title_style: "font-size: 16pt; font-weight: bold;"
+  show_forecast: 1
+  prefer_icons: 1
+  forecast_title: Morgen
+
+temperature_now:
+    widget_type: entitysensor
+    title: Temperatur
+    entity: sensor.dark_sky_apparent_temperature
+    sub_entity: sensor.dark_sky_overnight_low_temperature_0
+    #widget_style: "background-color:inherit;"
+    title2_style: "margin-top:3px;"
+    state_text_style: "background-color:inherit"
+
+weather_icon_now:
+    widget_type: iconsensor
+    entity: sensor.dark_sky_icon
+    icons:
+        clear-day:
+            icon: mdi-weather-sunny
+            style: "$style_active"
+        clear-night:
+            icon: mdi-weather-night
+            style: "$style_active"
+        rain:
+            icon: mdi-weather-rainy
+            style: "$style_active"
+        snow:
+            icon: mdi-weather-snowy
+            style: "$style_active"
+        sleet:
+            icon: mdi-weather-snowy-rainy
+            style: "$style_active"
+        wind:
+            icon: mdi-weather-windy
+            style: "$style_active"
+        fog:
+            icon: mdi-weather-fog
+            style: "$style_active"
+        cloudy:
+            icon: mdi-weather-cloudy
+            style: "$style_active"
+        partly-cloudy-day:
+            icon: mdi-weather-partlycloudy
+            style: "$style_active"
+        partly-cloudy-night:
+            icon: mdi-weather-partlycloudy
+            style: "$style_active"
+    title_entity: sensor.dark_sky_summary
+    sub_entity: sensor.dark_sky_precip_probability
+    widget_style: "background-color:inherit;"
+    title2_style: "margin-top:3px;"
+    state_text_style: "background-color:inherit"
+
+daily_forecast:
+    widget_type: entitysensor
+    title: 24h Vorhersage
+    entity: sensor.dark_sky_hourly_summary
+    widget_style: "background-color:inherit;"
+    title_style: "background-color:#555;margin-top:-5px;padding:5px 0 3px;border-radius:5px;"
+
+wind:
+    widget_type: entitysensor
+    entity: sensor.wind_speed
+    title2_entity: sensor.wind_scale_friendly
+    sub_entity: sensor.wind_bearing_cardinal_friendly
+    widget_style: "background-color:inherit;"
+    state_text_style: "background-color:inherit;"
+
+#
+# Lightmanagement
+#
+hue_scene_label:
+  widget_type: label
+  title2: "Hue Szenen"
+  title2_style: "font-size: 200%;"
+
+label_hue_wz:
+  widget_type: label
+  title2: "Wohnzimmer"
+  title2_style: "font-size: 200%;"
+
+label_hue_sz:
+  widget_type: label
+  title2: "Schlafzimmer"
+  title2_style: "font-size: 200%;"
+
+label_licht:
+  widget_type: light
+  title: Licht
+  entity: light.wohnzimmer
+  icon_on: mdi-sofa
+  icon_off: mdi-sofa
+
+label_licht_2:
+  widget_type: light
+  title: Licht
+  entity: light.schlafzimmer
+  icon_on: mdi-hotel
+  icon_off: mdi-hotel
+
+scene_select:
+  widget_type: input_select
+  title: Szene wählen
+  entity: input_select.bedroom_scenes
+
+room_select:
+  widget_type: input_select
+  title: Zimmer
+  entity: input_select.lamp
+
+bri_wohnzimmer:
+  widget_type: input_number
+  title: Helligkeit
+  entity: input_number.brightness_wohnzimmer
+
+bri_schlafzimmer:
+  widget_type: input_number
+  title: Helligkeit
+  entity: input_number.brightness_schlafzimmer
+
+kino_bool:
+  widget_type: switch
+  title: Kino Modus
+  entity: input_boolean.kino_modus
+  icon_on: mdi-theater
+  icon_off: mdi-theater
+
+wakeup_bool:
+  widget_type: switch
+  title: Wake-Up Modus
+  entity: input_boolean.wakeup_enabled
+  icon_on: mdi-theme-light-dark
+  icon_off: mdi-theme-light-dark
+
+wakeup_weekend:
+  widget_type: switch
+  title: Wake-Up Wochenende
+  entity: input_boolean.wakeup_weekend
+  icon_on: mdi-calendar-multiselect
+  icon_off: mdi-calendar-multiselect
+
+#
+# RSS Feeds
+#
+hn_rss_feed:
+  widget_type: rss
+  title: HN RSS feed news.ycombinator.com
+  entity: rss.hn
+#  recent: 10
+  interval: 300
+  text_style: "font-size: 16pt;"
+
+ts_rss_feed:
+  widget_type: rss
+  #title: Tagesschau RSS feed tagesschau.de
+  entity: rss.tagesschau
+  show_description: 1
+  interval: 300
+  #text_style: "font-size: 16pt;"
+
+tech_rss_feed:
+  widget_type: rss
+  title: CNN Technology
+  entity: rss.cnn-tech
+  show_description: 1
+  interval: 300
+
+world_rss_feed:
+  widget_type: rss
+  title: World News
+  entity: rss.cnn-world
+  show_description: 1
+  interval: 300
+
+eu_rss_feed:
+  widget_type: rss
+  title: Europe News
+  entity: rss.cnn-eu
+  show_description: 1
+  interval: 300
+
+foot_rss_feed:
+  widget_type: rss
+  title: Football
+  entity: rss.cnn-foot
+  show_description: 1
+  interval: 300
+
+#
+# Layout
+#
+layout:
+    - include: header
+    - nav_main,         label(6x1), reload, clock(2x1)
+    - nav_weather,      weather_label(2x1), temperature_now, weather_icon_now, daily_forecast(2x1), ts_rss_feed(3x1)
+    - nav_spacer(1x3),  modi_title(2x1), kino_bool, spacer, wakeup_bool, wakeup_weekend, world_rss_feed(3x1)
+    -                   hue_scene_label(2x1), scene_select(2x1), room_select(2x1), hn_rss_feed(3x1)
+    -                   label_hue_wz(2x1), label_licht(2x1), bri_wohnzimmer(2x1), tech_rss_feed(3x1)
+    - nav_status,       label_hue_sz(2x1), label_licht_2(2x1), bri_schlafzimmer(2x1), foot_rss_feed(3x1)
