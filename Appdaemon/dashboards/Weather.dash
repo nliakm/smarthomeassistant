@@ -1,0 +1,357 @@
+#
+# Main arguments, all optional
+#
+title: Weather
+widget_dimensions: [121, 122]
+widget_size: [1, 1]
+widget_margins: [5, 5]
+columns: 10
+rows: 6
+global_parameters:
+    use_comma: 0
+    precision: 0
+    use_hass_icon: 1
+
+
+#
+# Common navigation
+#
+nav_main:
+    widget_type: navigate
+    dashboard: Main
+    title2: Home
+    icon_inactive: mdi-home-assistant
+    widget_style: "background: DARKSLATEBLUE;"
+
+nav_switchboard:
+    widget_type: navigate
+    dashboard: Hello
+    title2: Switchboard
+    icon_inactive: mdi-nintendo-switch
+    widget_style: "background: DARKSLATEBLUE;"
+
+nav_weather:
+    widget_type: navigate
+    dashboard: Weather
+    title2: Wetter
+    icon_inactive: mdi-weather-partlycloudy
+    widget_style: "background: MEDIUMSLATEBLUE;"
+
+nav_status:
+    widget_type: navigate
+    dashboard: Status
+    title2: Status
+    icon_inactive: mdi-information-outline
+    widget_style: "background: DARKSLATEBLUE;"
+
+nav_spacer:
+    widget_type: label
+    widget_style: "background: DARKSLATEBLUE;"
+
+
+
+#
+# Header
+#
+label:
+    widget_type: sensor
+    title2: Wetter
+    entity: sensor.dark_sky_apparent_temperature
+    sub_entity: sensor.dark_sky_hourly_summary
+    widget_style: "background: MEDIUMSLATEBLUE;"
+    title2_style: "font-size: 150%; text-transform: uppercase; letter-spacing: 0.35em;"
+    text_style: "font-size: 300%;"
+    state_text_style: "font-size:125%;padding-bottom:0.15em;background-color:MEDIUMSLATEBLUE;"
+
+
+#
+# Current weather
+#
+
+wind:
+    widget_type: entitysensor
+    entity: sensor.dark_sky_wind_speed
+    title: Windgeschw.
+    #title2_entity: sensor.wind_scale_friendly
+    title_style: "background-color:#555;margin-right:-10px;margin-top:-5px;border-radius: 5px 5px 0 0"
+    widget_style: "background-color:inherit;"
+
+wind_bearing:
+    widget_type: entitysensor
+    entity: sensor.dark_sky_wind_bearing
+    title: Windrichtung
+    title_style: "background-color:#555;margin-right:-10px;margin-top:-5px;border-radius: 5px 5px 0 0"
+    widget_style: "background-color:inherit;"
+
+wind_icon:
+    widget_type: iconsensor
+    entity: sensor.dark_sky_wind_bearing
+    #title2_entity: sensor.wind_bearing_cardinal_friendly
+    icons:
+        "N":
+            icon: mdi-arrow-up
+            style: "$style_active"
+        "NE":
+            icon: mdi-arrow-top-right
+            style: "$style_active"
+        "E":
+            icon: mdi-arrow-right
+            style: "$style_active"
+        "SE":
+            icon: mdi-arrow-bottom-right
+            style: "$style_active"
+        "S":
+            icon: mdi-arrow-down
+            style: "$style_active"
+        "SW":
+            icon: mdi-arrow-bottom-left
+            style: "$style_active"
+        "W":
+            icon: mdi-arrow-left
+            style: "$style_active"
+        "NW":
+            icon: mdi-arrow-top-left
+            style: "$style_active"
+    widget_style: "background-color:inherit;"
+
+
+#
+# Weather forecasts
+#
+daily_forecast:
+    widget_type: sensor
+    title: 24h Vorhersage
+    entity: sensor.dark_sky_hourly_summary
+
+weekly_forecast:
+    widget_type: sensor
+    title: Wochenvorhersage
+    entity: sensor.dark_sky_daily_summary
+
+temperature_today:
+    widget_type: entitysensor
+    title: Heute
+    entity: sensor.dark_sky_daytime_high_temperature_0
+    sub_entity: sensor.dark_sky_overnight_low_temperature_0
+    #title2_entity: sensor.feels_like
+    widget_style: "background-color:inherit;"
+    title_style: "background-color:#555;margin-right:-10px;margin-top:-5px;border-radius: 5px 5px 0 0"
+    #title2_style: "margin-top:3px;"
+    state_text_style: "background-color:inherit"
+
+temperature_tomorrow:
+    widget_type: entitysensor
+    title: Morgen
+    entity: sensor.dark_sky_daytime_high_temperature_1
+    sub_entity: sensor.dark_sky_overnight_low_temperature_1
+    #title2_entity: sensor.feels_like_1
+    widget_style: "background-color:inherit;"
+    title_style: "background-color:#555;margin-top:-5px;border-radius: 5px 5px 0 0"
+    #title2_style: "margin-top:3px;"
+    state_text_style: "background-color:inherit"
+
+temperature_after_tomorrow:
+    widget_type: entitysensor
+    title: Übermorgen
+    entity: sensor.dark_sky_daytime_high_temperature_2
+    sub_entity: sensor.dark_sky_overnight_low_temperature_2
+    #title_entity: sensor.after_tomorrow
+    #title2_entity: sensor.feels_like_2
+    widget_style: "background-color:inherit;"
+    title_style: "background-color:#555;margin-top:-5px;border-radius: 5px 5px 0 0"
+    #title_style: "background-color:#555;padding:5px 52% 3px;margin-top:-5px;border-radius: 5px 5px 0 0"
+    #title2_style: "margin-top:3px;"
+    state_text_style: "background-color:inherit"
+
+weather_icon_today:
+    widget_type: iconsensor
+    entity: sensor.dark_sky_icon
+    icons:
+        clear-day:
+            icon: mdi-weather-sunny
+            style: "$style_active"
+        clear-night:
+            icon: mdi-weather-night
+            style: "$style_active"
+        rain:
+            icon: mdi-weather-rainy
+            style: "$style_active"
+        snow:
+            icon: mdi-weather-snowy
+            style: "$style_active"
+        sleet:
+            icon: mdi-weather-snowy-rainy
+            style: "$style_active"
+        wind:
+            icon: mdi-weather-windy
+            style: "$style_active"
+        fog:
+            icon: mdi-weather-fog
+            style: "$style_active"
+        cloudy:
+            icon: mdi-weather-cloudy
+            style: "$style_active"
+        partly-cloudy-day:
+            icon: mdi-weather-partlycloudy
+            style: "$style_active"
+        partly-cloudy-night:
+            icon: mdi-weather-partlycloudy
+            style: "$style_active"
+    title_entity: sensor.dark_sky_summary
+    sub_entity: sensor.dark_sky_precip_probability
+    widget_style: "background-color:inherit;"
+    state_text_style: "background-color:inherit"
+
+weather_icon_tomorrow:
+    widget_type: iconsensor
+    entity: sensor.dark_sky_icon_1
+    icons:
+        clear-day:
+            icon: mdi-weather-sunny
+            style: "$style_active"
+        clear-night:
+            icon: mdi-weather-night
+            style: "$style_active"
+        rain:
+            icon: mdi-weather-rainy
+            style: "$style_active"
+        snow:
+            icon: mdi-weather-snowy
+            style: "$style_active"
+        sleet:
+            icon: mdi-weather-snowy-rainy
+            style: "$style_active"
+        wind:
+            icon: mdi-weather-windy
+            style: "$style_active"
+        fog:
+            icon: mdi-weather-fog
+            style: "$style_active"
+        cloudy:
+            icon: mdi-weather-cloudy
+            style: "$style_active"
+        partly-cloudy-day:
+            icon: mdi-weather-partlycloudy
+            style: "$style_active"
+        partly-cloudy-night:
+            icon: mdi-weather-partlycloudy
+            style: "$style_active"
+    title_entity: sensor.dark_sky_summary_1
+    sub_entity: sensor.dark_sky_precip_probability_1
+    widget_style: "background-color:inherit;"
+    state_text_style: "background-color:inherit"
+
+weather_icon_after_tomorrow:
+    widget_type: iconsensor
+    entity: sensor.dark_sky_icon_2
+    icons:
+        clear-day:
+            icon: mdi-weather-sunny
+            style: "$style_active"
+        clear-night:
+            icon: mdi-weather-night
+            style: "$style_active"
+        rain:
+            icon: mdi-weather-rainy
+            style: "$style_active"
+        snow:
+            icon: mdi-weather-snowy
+            style: "$style_active"
+        sleet:
+            icon: mdi-weather-snowy-rainy
+            style: "$style_active"
+        wind:
+            icon: mdi-weather-windy
+            style: "$style_active"
+        fog:
+            icon: mdi-weather-fog
+            style: "$style_active"
+        cloudy:
+            icon: mdi-weather-cloudy
+            style: "$style_active"
+        partly-cloudy-day:
+            icon: mdi-weather-partlycloudy
+            style: "$style_active"
+        partly-cloudy-night:
+            icon: mdi-weather-partlycloudy
+            style: "$style_active"
+    title_entity: sensor.dark_sky_summary_2
+    sub_entity: sensor.dark_sky_precip_probability_2
+    widget_style: "background-color:inherit;"
+    state_text_style: "background-color:inherit"
+
+
+#
+# Outdoor life quality
+#
+aqi:
+    widget_type: sensor
+    title: Air Quality Index
+    entity: sensor.aqi
+    sub_entity: sensor.aqi_friendly
+    state_text_style: "background-color:#555;"
+
+aqi_particles:
+    widget_type: sensor
+    title: 2.5PM
+    entity: sensor.aqi_particles
+    sub_entity: sensor.aqi_particles_friendly
+    state_text_style: "background-color:#555;"
+
+aqi_ozone:
+    widget_type: sensor
+    title: Ozone
+    entity: sensor.aqi_ozone
+    sub_entity: sensor.aqi_ozone_friendly
+    state_text_style: "background-color:#555;"
+
+aqi_carbon_monoxide:
+    widget_type: sensor
+    title: Carbon Monoxide
+    entity: sensor.aqi_carbon_monoxide
+    sub_entity: sensor.aqi_carbon_monoxide_friendly
+    state_text_style: "background-color:#555;"
+
+aqi_nitrogen_dioxide:
+    widget_type: sensor
+    title: Nitrogen Dioxide
+    entity: sensor.aqi_nitrogen_dioxide
+    sub_entity: sensor.aqi_nitrogen_dioxide_friendly
+    state_text_style: "background-color:#555;"
+
+aqi_sulphur_dioxide:
+    widget_type: sensor
+    title: Sulphur Dioxide
+    entity: sensor.aqi_sulphur_dioxide
+    sub_entity: sensor.aqi_sulphur_dioxide_friendly
+    state_text_style: "background-color:#555;"
+
+uv:
+    widget_type: sensor
+    title: UV
+    entity: sensor.uv
+    sub_entity: sensor.uv_friendly
+    state_text_style: "background-color:#555;"
+
+warning_niedersachsen:
+  widget_type: iframe
+  refresh: 600
+  img_list:
+    - https://www.dwd.de/DWD/warnungen/warnapp_gemeinden/json/warnungen_gemeinde_map_nib.png
+
+warning_niedersachsen_2:
+  widget_type: iframe
+  refresh: 600
+  img_list:
+    - https://www.dwd.de/DWD/warnungen/warnstatus/SchilderHA.jpg
+#
+# Layout
+#
+layout:
+    - include: header
+    - nav_main,         label(6x1), reload, clock(2x1)
+    - nav_weather,      warning_niedersachsen(3x3), warning_niedersachsen_2(6x3)
+    - nav_spacer(1x3)
+    -
+    -                   daily_forecast(3x1),temperature_today(2x1),temperature_tomorrow(2x1),temperature_after_tomorrow(2x1)
+    - nav_status,       weekly_forecast(3x1),weather_icon_today(2x1),weather_icon_tomorrow(2x1),weather_icon_after_tomorrow(2x1)
